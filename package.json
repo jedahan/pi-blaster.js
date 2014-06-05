@@ -1,16 +1,26 @@
 {
-	"author": "Thomas Sarlandie <thomas@sarlandie.net>",
-	"name": "pi-blaster.js",
-	"description": "A node.js library for the pi-blaster daemon - Allows PWM control of the raspberry Pi pins",
-	"version": "0.0.2",
-	"main": "pi-blaster.js",
+	"author": "Jonathan Dahan <jonathan@jonathan.is>",
+	"name": "pigpio.js",
+	"description": "A node.js library for the pigpio daemon, allowing fast, powerful PWM control of the Raspberry Pi pins",
+	"version": "0.0.1",
+	"main": "lib/pigpio",
+	"scripts": {
+    "build": "coffee --bare --compile --output lib/pigpio src/pigpio/*.coffee",
+    "prepublish": "coffee --bare --compile --output lib/pigpio src/pigpio/*.coffee",
+    "postpublish": "rm -rf lib"
+  },
 	"repository": {
-		"type": "git", 
-		"url": "git@github.com:sarfata/pi-blaster.js.git"
+		"type": "git",
+		"url": "git@github.com:jedahan/pigpio.js.git"
 	},
-	"homepage": "https://github.com/sarfata/pi-blaster.js",
+	"homepage": "https://github.com/jedahan/pigpio.js",
 	"bugs": {
-		"url": "https://github.com/sarfata/pi-blaster.js/issues"
+		"url": "https://github.com/sarfata/pigpio.js/issues"
 	},
-	"tags": ["raspberry", "pi", "pwm"]
+	"licenses": [
+    { "type": "MIT",
+      "url": "http://github.com/jedahan/pigpio.js/blob/master/MIT-LICENSE"
+    }
+  ]
+	"tags": ["raspberry", "pi", "pwm", "gpio"]
 }

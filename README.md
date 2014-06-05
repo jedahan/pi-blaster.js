@@ -1,26 +1,31 @@
-pi-blaster.js
-=============
+pigpio
+======
 
-NodeJS library for the [pi-blaster daemon][pi-blaster].
+NodeJS library for the [pigpio daemon][pigpio].
 
 ## Installation
-    
+
 Make sure you have `node` and `npm` installed on your Raspberry Pi.
 
-Install the pi-blaster daemon ([instructions][pi-blaster]).
+Install the pigpio daemon ([instructions][pi-blaster]).
 
-Finally install `pi-blaster.js`:
+Install this library
 
-    npm install pi-blaster.js
-    
+    npm install pigpio
+
 ## Usage
 
-    var piblaster = require('pi-blaster.js');
-    
-    piblaster
-    
+    # example.coffee
+    pigpio = require 'pigpio'
+
+    pigpio.setFrequency 8000
+
+    # Set pin 22 to pwm at 50%, faking ~1.65V
+    pigpio.setPwm 22, 0.5
+
 ## License
 
-Copyright 2013 - Thomas Sarlandie. Published under the MIT open source license (see full license in LICENSE.txt file).
+Copyright 2014 - Jonathan Dahan. Published under the MIT open source license
+Copyright 2013 - Thomas Sarlandie. Published under the MIT open source license
 
-[pi-blaster]: https://github.com/sarfata/pi-blaster
+[pigpio]: https://github.com/joan2937/pigpio
