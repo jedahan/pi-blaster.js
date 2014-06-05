@@ -5,8 +5,8 @@
 	"version": "0.0.1",
 	"main": "lib/pigpio",
 	"scripts": {
-    "build": "coffee --bare --compile --output lib/pigpio src/pigpio/*.coffee",
-    "prepublish": "coffee --bare --compile --output lib/pigpio src/pigpio/*.coffee",
+    "build": "coffee --bare --js < src/pigpio/index.coffee > lib/pigpio/index.js",
+    "prepublish": "coffee --bare --js < src/pigpio/index.coffee > lib/pigpio/index.js",
     "postpublish": "rm -rf lib"
   },
 	"repository": {
@@ -21,6 +21,6 @@
     { "type": "MIT",
       "url": "http://github.com/jedahan/pigpio.js/blob/master/MIT-LICENSE"
     }
-  ]
+  ],
 	"tags": ["raspberry", "pi", "pwm", "gpio"]
 }
