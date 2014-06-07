@@ -7,7 +7,7 @@
 	"scripts": {
     "build": "coffee --bare --js < src/pigpio/index.coffee > lib/pigpio/index.js",
     "prepublish": "coffee --bare --js < src/pigpio/index.coffee > lib/pigpio/index.js",
-    "postpublish": "rm -rf lib"
+    "postpublish": "rm -f lib/pigpio/index.js"
   },
 	"repository": {
 		"type": "git",
