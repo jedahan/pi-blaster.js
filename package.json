@@ -2,7 +2,7 @@
 	"author": "Jonathan Dahan <jonathan@jonathan.is>",
 	"name": "pigpio.js",
 	"description": "A node.js library for the pigpio daemon, allowing fast, powerful PWM control of the Raspberry Pi pins",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "lib/pigpio",
 	"scripts": {
     "build": "coffee --bare --js < src/pigpio/index.coffee > lib/pigpio/index.js",
