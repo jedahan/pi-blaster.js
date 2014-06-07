@@ -1,7 +1,8 @@
 # Adapted from https://github.com/sarfata/pi-blaster.js
 
 # this is the set of pins common to both the model A and B raspberry pi, that's safe to use
-safePins = [4, 7, 8, 9, 10, 11, 14, 15, 17, 18, 22, 23, 24, 25]
+# DONT USE PIN 27 ON MODEL A THIS IS NO LONGER SAFE
+safePins = [4, 7, 8, 9, 10, 11, 14, 15, 17, 18, 22, 23, 24, 25, 27]
 
 fs = require "fs"
 PIGPIO_PATH = "/dev/pigpio"
